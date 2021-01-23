@@ -7,7 +7,10 @@
 const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
 
-const char *url = "https://<IoT Hubの名前>.azure-devices.net/devices/<デバイス名>/messages/events?api-version=2018-06-30";
+// Azure IoT HubのREST APIのURL
+const char* url = "https://<IoT Hubの名前>.azure-devices.net/devices/<デバイス名>/messages/events?api-version=2018-06-30";
+
+// ルート証明書
 const char* azure_iot_hub_root_ca =
     "-----BEGIN CERTIFICATE-----\n" \
     "MIIDdzCCAl+gAwIBAgIEAgAAuTANBgkqhkiG9w0BAQUFADBaMQswCQYDVQQGEwJJ\n" \
@@ -33,7 +36,7 @@ const char* azure_iot_hub_root_ca =
 
 // SASトークン
 // 発行方法：https://qiita.com/tmitsuoka0423/items/bfcc91d50cd0fe312f6c#sas%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%82%92%E7%99%BA%E8%A1%8C%E3%81%99%E3%82%8B
-const char *sasToken = "SharedAccessSignature sr=xxxxxxxxxx&sig=xxxxxxxxxxxxxxxx&se=xxxxxxxxxxxxxxx&skn=xxxxxxxxxxxxxxxxxx";
+const char* sasToken = "SharedAccessSignature sr=xxxxxxxxxx&sig=xxxxxxxxxxxxxxxx&se=xxxxxxxxxxxxxxx&skn=xxxxxxxxxxxxxxxxxx";
 
 void post() {
   HTTPClient http;
